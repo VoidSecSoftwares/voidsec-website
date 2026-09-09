@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoidSecSoftwares</title>
+  <meta name="description" content="VoidSecSoftwares — Open source organization for security and infrastructure.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="particles" id="particles"></div>
+  <div class="grid-bg"></div>
+  <canvas id="bg3d" class="bg-3d"></canvas>
+
+  <nav class="nav" role="navigation" aria-label="Navigation">
+    <div class="container nav__inner">
+      <a href="#" class="nav__brand">
+        <img src="https://avatars.githubusercontent.com/u/326985314?s=56" alt="VoidSecSoftwares">
+        <span>VoidSecSoftwares</span>
+      </a>
+      <div class="nav__links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#open-source">Open Source</a>
+      </div>
+      <a href="https://github.com/VoidSecSoftwares" target="_blank" rel="noopener" class="nav__cta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        GitHub
+      </a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container hero__container">
+      <div class="hero__content">
+        <div class="hero__tag">Open Source Organization</div>
+        <h1>Building software for<br><span class="accent glitch" data-text="security">security</span> and <span class="accent glitch" data-text="infrastructure">infrastructure</span></h1>
+        <p class="hero__desc">
+          VoidSec is an open source organization focused on building, maintaining, and supporting projects for <strong>developers</strong>, <strong>security researchers</strong>, and the wider technology community.
+        </p>
+        <div class="hero__actions">
+          <a href="https://github.com/VoidSecSoftwares" target="_blank" rel="noopener" class="btn btn--primary magnetic">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            Explore Our Code
+          </a>
+          <a href="#projects" class="btn btn--ghost magnetic">View Projects</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat counter">
+            <span class="stat__value" data-stat="repos">—</span>
+            <span class="stat__label">Repositories</span>
+          </div>
+          <div class="stat counter">
+            <span class="stat__value" data-stat="followers">—</span>
+            <span class="stat__label">Followers</span>
+          </div>
+          <div class="stat counter">
+            <span class="stat__value" data-stat="languages">—</span>
+            <span class="stat__label">Languages</span>
+          </div>
+          <div class="stat counter">
+            <span class="stat__value" data-stat="location">—</span>
+            <span class="stat__label">Location</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__avatar">
+        <div class="avatar-glow"></div>
+        <div class="avatar-3d-wrapper">
+          <svg class="avatar" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#0C130E;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#1a2a1e;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <g class="avatar__body">
+              <rect x="55" y="160" width="90" height="80" rx="10" fill="url(#bodyGrad)" stroke="#1F1F1F" stroke-width="1"/>
+              <line x1="75" y1="180" x2="125" y2="180" stroke="#00FF41" stroke-width="0.3" opacity="0.3"/>
+              <line x1="75" y1="195" x2="125" y2="195" stroke="#00FF41" stroke-width="0.3" opacity="0.3"/>
+              <line x1="75" y1="210" x2="125" y2="210" stroke="#00FF41" stroke-width="0.3" opacity="0.3"/>
+              <text x="100" y="228" text-anchor="middle" fill="#00FF41" font-family="monospace" font-size="7" opacity="0.5">VOIDSEC</text>
+              <circle cx="100" cy="185" r="3" fill="none" stroke="#00FF41" stroke-width="0.5" opacity="0.4"/>
+              <circle cx="100" cy="185" r="1" fill="#00FF41" opacity="0.6"/>
+            </g>
+            <g class="avatar__head">
+              <ellipse cx="100" cy="95" rx="50" ry="56" fill="url(#bodyGrad)" stroke="#1F1F1F" stroke-width="1"/>
+              <g class="avatar__eyes">
+                <g class="avatar__eye avatar__eye--left">
+                  <ellipse cx="80" cy="90" rx="10" ry="8" fill="#000" stroke="#00FF41" stroke-width="0.5" opacity="0.8"/>
+                  <circle class="avatar__pupil avatar__pupil--left" cx="80" cy="90" r="4" fill="#00FF41" filter="url(#glow)"/>
+                  <circle cx="83" cy="87" r="1.2" fill="#fff" opacity="0.8"/>
+                </g>
+                <g class="avatar__eye avatar__eye--right">
+                  <ellipse cx="120" cy="90" rx="10" ry="8" fill="#000" stroke="#00FF41" stroke-width="0.5" opacity="0.8"/>
+                  <circle class="avatar__pupil avatar__pupil--right" cx="120" cy="90" r="4" fill="#00FF41" filter="url(#glow)"/>
+                  <circle cx="123" cy="87" r="1.2" fill="#fff" opacity="0.8"/>
+                </g>
+              </g>
+              <path class="avatar__mouth" d="M 88 114 Q 100 120 112 114" fill="none" stroke="#00FF41" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+              <line x1="100" y1="39" x2="100" y2="22" stroke="#1F1F1F" stroke-width="2"/>
+              <circle cx="100" cy="18" r="4" fill="#0C130E" stroke="#00FF41" stroke-width="1.5" class="avatar__antenna-light" filter="url(#glow)"/>
+              <circle cx="100" cy="18" r="2" fill="#00FF41" opacity="0.8"/>
+            </g>
+            <rect class="avatar__scanline" x="50" y="37" width="100" height="2" fill="#00FF41" opacity="0.1"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">About VoidSec</div>
+        <h2 class="section__title">What we do</h2>
+        <p class="section__subtitle">We build software across security, infrastructure, developer tools, automation, and more.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal stagger-1">
+          <div class="about-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+          </div>
+          <h3>Security First</h3>
+          <p>Building tools that protect and empower developers and security researchers worldwide.</p>
+        </div>
+        <div class="about-card reveal stagger-2">
+          <div class="about-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </div>
+          <h3>Open Source</h3>
+          <p>All projects are built in the open. Anyone can use, contribute, improve, or learn from our code.</p>
+        </div>
+        <div class="about-card reveal stagger-3">
+          <div class="about-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Community</h3>
+          <p>Contributions, issues, and discussions are always welcome. Build together with us.</p>
+        </div>
+        <div class="about-card reveal stagger-4">
+          <div class="about-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Global Reach</h3>
+          <p>Based in France, our projects serve developers and researchers around the world.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section section--alt">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Projects</div>
+        <h2 class="section__title">What we build</h2>
+        <p class="section__subtitle">Open source software designed to be useful, reliable, and accessible.</p>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+        <div class="project-card project-card--loading"><div class="project-card__skeleton"></div></div>
+        <div class="project-card project-card--loading"><div class="project-card__skeleton"></div></div>
+        <div class="project-card project-card--loading"><div class="project-card__skeleton"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="open-source" class="section">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Open Source</div>
+        <h2 class="section__title">Get involved</h2>
+        <p class="section__subtitle">Open source is built by communities. There are many ways to participate.</p>
+      </div>
+      <div class="involve-grid">
+        <div class="involve-item reveal stagger-1">
+          <div class="involve-item__num">01</div>
+          <h4>Explore repositories</h4>
+          <p>Discover our projects and see what we've been building.</p>
+        </div>
+        <div class="involve-item reveal stagger-2">
+          <div class="involve-item__num">02</div>
+          <h4>Contribute</h4>
+          <p>Submit code, documentation, or ideas to help improve our projects.</p>
+        </div>
+        <div class="involve-item reveal stagger-3">
+          <div class="involve-item__num">03</div>
+          <h4>Report issues</h4>
+          <p>Find bugs or suggest improvements through our issue trackers.</p>
+        </div>
+        <div class="involve-item reveal stagger-4">
+          <div class="involve-item__num">04</div>
+          <h4>Good first issues</h4>
+          <p>Look for <code>good first issue</code> tags to get started quickly.</p>
+        </div>
+        <div class="involve-item reveal stagger-5">
+          <div class="involve-item__num">05</div>
+          <h4>Start discussions</h4>
+          <p>Share your feedback and ideas with the community.</p>
+        </div>
+        <div class="involve-item reveal stagger-6">
+          <div class="involve-item__num">06</div>
+          <h4>Fork &amp; build</h4>
+          <p>Fork our projects and create something of your own.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2 class="section__title reveal">Build open. Build together.</h2>
+      <p class="cta__desc reveal stagger-1">Join the VoidSec community and help us shape the future of open source.</p>
+      <a href="https://github.com/VoidSecSoftwares" target="_blank" rel="noopener" class="btn btn--primary magnetic reveal stagger-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        Visit GitHub
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="https://avatars.githubusercontent.com/u/326985314?s=64" alt="VoidSecSoftwares">
+          <p>VoidSecSoftwares — Building open source software for security, infrastructure, and developer tools.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Organization</h4>
+          <a href="https://github.com/VoidSecSoftwares" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/VoidSecSoftwares/repositories" target="_blank" rel="noopener">Repositories</a>
+          <a href="https://github.com/VoidSecSoftwares/projects" target="_blank" rel="noopener">Projects</a>
+          <a href="https://github.com/VoidSecSoftwares/people" target="_blank" rel="noopener">People</a>
+        </div>
+        <div class="footer__col">
+          <h4>Projects</h4>
+          <a href="https://github.com/VoidSecSoftwares/voidsec-proxy" target="_blank" rel="noopener">voidsec-proxy</a>
+          <a href="https://github.com/VoidSecSoftwares/windows-arsenal" target="_blank" rel="noopener">windows-arsenal</a>
+          <a href="https://github.com/VoidSecSoftwares/.github" target="_blank" rel="noopener">.github</a>
+        </div>
+        <div class="footer__col">
+          <h4>Connect</h4>
+          <a href="https://github.com/VoidSecSoftwares" target="_blank" rel="noopener">GitHub Profile</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 VoidSecSoftwares. MIT License. Made with <span class="heart">♥</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var API_ORG = 'https://api.github.com/orgs/VoidSecSoftwares';
+      var API_REPOS = 'https://api.github.com/orgs/VoidSecSoftwares/repos?per_page=100&sort=updated';
+
+      var statsEls = {
+        repos: document.querySelector('[data-stat="repos"]'),
+        followers: document.querySelector('[data-stat="followers"]'),
+        languages: document.querySelector('[data-stat="languages"]'),
+        location: document.querySelector('[data-stat="location"]')
+      };
+      var projectsGrid = document.getElementById('projects-grid');
+
+      function setLoading() {
+        if (statsEls.repos) statsEls.repos.textContent = '...';
+        if (statsEls.followers) statsEls.followers.textContent = '...';
+        if (statsEls.languages) statsEls.languages.textContent = '...';
+        if (statsEls.location) statsEls.location.textContent = '...';
+      }
+
+      function fetchJSON(url) {
+        return fetch(url, { headers: { 'Accept': 'application/vnd.github.v3+json' } })
+          .then(function (res) {
+            if (!res.ok) throw new Error('GitHub API ' + res.status);
+            return res.json();
+          });
+      }
+
+      function animateCounter(el, target, isString) {
+        if (isString) {
+          el.textContent = target;
+          return;
+        }
+        var start = 0;
+        var duration = 1500;
+        var startTime = null;
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(eased * target);
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      function updateStats(org, repos) {
+        if (statsEls.repos) animateCounter(statsEls.repos, org.public_repos, false);
+        if (statsEls.followers) animateCounter(statsEls.followers, org.followers, false);
+        if (statsEls.location) animateCounter(statsEls.location, org.location || '—', true);
+        var langs = {};
+        repos.forEach(function (r) { if (r.language) langs[r.language] = true; });
+        if (statsEls.languages) animateCounter(statsEls.languages, Object.keys(langs).length || 0, false);
+      }
+
+      function langColor(lang) {
+        var map = { 'Python': '#3572A5', 'PowerShell': '#012456', 'JavaScript': '#f1e05a', 'TypeScript': '#3178c6', 'HTML': '#e34c26', 'CSS': '#563d7c', 'Shell': '#89e051', 'Lua': '#000080', 'Go': '#00ADD8', 'Rust': '#dea584', 'Java': '#b07219', 'C': '#555555', 'C++': '#f34b7d', 'Ruby': '#701516' };
+        return map[lang] || '#94A3B8';
+      }
+
+      function renderProjects(repos) {
+        if (!projectsGrid) return;
+        if (!repos.length) {
+          projectsGrid.innerHTML = '<p style="color:var(--color-muted-fg);grid-column:1/-1;text-align:center;padding:2rem 0">No public repositories found.</p>';
+          return;
+        }
+        var html = '';
+        repos.forEach(function (repo, index) {
+          var license = repo.license && repo.license.spdx_id ? repo.license.spdx_id : '';
+          var lang = repo.language || '';
+          var desc = repo.description || 'No description.';
+          html += '<div class="project-card reveal stagger-' + (index % 6 + 1) + '">' +
+            '<div class="project-card__meta">' +
+              (lang ? '<span class="project-card__lang" style="color:' + langColor(lang) + '">' + lang + '</span>' : '') +
+              (license ? '<span class="project-card__license">' + license + '</span>' : '') +
+            '</div>' +
+            '<h3>' + repo.name + '</h3>' +
+            '<p>' + desc + '</p>' +
+            '<div class="project-card__footer">' +
+              '<span class="project-card__stat"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>' + repo.stargazers_count + '</span>' +
+              '<span class="project-card__stat"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="1.05" y1="12" x2="7" y2="12"/><path d="M3.41 5.63A8.96 8.96 0 0 1 12 3a9 9 0 0 1 9 9"/><path d="M20.59 5.63A8.96 8.96 0 0 1 21 12a9 9 0 0 1-9 9"/><line x1="17.09" y1="12" x2="22.95" y2="12"/></svg>' + repo.forks_count + '</span>' +
+            '</div>' +
+            '<a href="' + repo.html_url + '" target="_blank" rel="noopener" class="project-card__link">View Repository <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>' +
+          '</div>';
+        });
+        projectsGrid.innerHTML = html;
+        observeReveals();
+      }
+
+      setLoading();
+
+      Promise.all([fetchJSON(API_ORG), fetchJSON(API_REPOS)])
+        .then(function (results) {
+          updateStats(results[0], results[1]);
+          renderProjects(results[1]);
+        })
+        .catch(function () {
+          if (statsEls.repos) statsEls.repos.textContent = '—';
+          if (statsEls.followers) statsEls.followers.textContent = '—';
+          if (statsEls.languages) statsEls.languages.textContent = '—';
+          if (statsEls.location) statsEls.location.textContent = '—';
+          if (projectsGrid) projectsGrid.innerHTML = '<p style="color:var(--color-muted-fg);grid-column:1/-1;text-align:center;padding:2rem 0">Could not load repositories.</p>';
+        });
+
+      var avatar = document.querySelector('.avatar');
+      var avatarWrapper = document.querySelector('.avatar-3d-wrapper');
+      if (avatar && avatarWrapper) {
+        var head = avatar.querySelector('.avatar__head');
+        var pupilLeft = avatar.querySelector('.avatar__pupil--left');
+        var pupilRight = avatar.querySelector('.avatar__pupil--right');
+        var pupilOriginLeftX = 80;
+        var pupilOriginRightX = 120;
+        var pupilOriginY = 90;
+        var headMaxRotation = 6;
+        var pupilMaxOffset = 3;
+
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.addEventListener('mousemove', function (e) {
+            var rect = avatar.getBoundingClientRect();
+            var dx = (e.clientX - (rect.left + rect.width / 2)) / (window.innerWidth / 2);
+            var dy = (e.clientY - (rect.top + rect.height / 2)) / (window.innerHeight / 2);
+            dx = Math.max(-1, Math.min(1, dx));
+            dy = Math.max(-1, Math.min(1, dy));
+            head.style.transform = 'rotate(' + (dx * headMaxRotation) + 'deg) translateY(' + (dy * 2) + 'px)';
+            var px = dx * pupilMaxOffset;
+            var py = dy * 2;
+            pupilLeft.setAttribute('cx', pupilOriginLeftX + px);
+            pupilLeft.setAttribute('cy', pupilOriginY + py);
+            pupilRight.setAttribute('cx', pupilOriginRightX + px);
+            pupilRight.setAttribute('cy', pupilOriginY + py);
+            var rotateY = dx * 15;
+            var rotateX = -dy * 10;
+            avatarWrapper.style.transform = 'perspective(800px) rotateY(' + rotateY + 'deg) rotateX(' + rotateX + 'deg)';
+          });
+        }
+      }
+
+      var nav = document.querySelector('.nav');
+      if (nav) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+          } else {
+            nav.classList.remove('scrolled');
+          }
+        });
+      }
+
+      function createParticles() {
+        var container = document.getElementById('particles');
+        if (!container) return;
+        for (var i = 0; i < 30; i++) {
+          var particle = document.createElement('div');
+          particle.className = 'particle';
+          particle.style.left = Math.random() * 100 + '%';
+          particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+          particle.style.animationDelay = (Math.random() * 10) + 's';
+          particle.style.width = (Math.random() * 3 + 1) + 'px';
+          particle.style.height = particle.style.width;
+          container.appendChild(particle);
+        }
+      }
+      createParticles();
+
+      function init3DBackground() {
+        var canvas = document.getElementById('bg3d');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+        var width = canvas.width = window.innerWidth;
+        var height = canvas.height = window.innerHeight;
+        var cubes = [];
+        for (var i = 0; i < 15; i++) {
+          cubes.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            z: Math.random() * 500,
+            size: Math.random() * 30 + 10,
+            rotX: Math.random() * Math.PI * 2,
+            rotY: Math.random() * Math.PI * 2,
+            speedX: (Math.random() - 0.5) * 0.5,
+            speedY: (Math.random() - 0.5) * 0.5,
+            rotSpeedX: (Math.random() - 0.5) * 0.02,
+            rotSpeedY: (Math.random() - 0.5) * 0.02,
+            opacity: Math.random() * 0.15 + 0.05
+          });
+        }
+        var mouseX = 0;
+        var mouseY = 0;
+        document.addEventListener('mousemove', function (e) {
+          mouseX = (e.clientX / width - 0.5) * 2;
+          mouseY = (e.clientY / height - 0.5) * 2;
+        });
+        function project3D(x, y, z) {
+          var fov = 500;
+          var scale = fov / (fov + z);
+          return { x: x * scale + width / 2, y: y * scale + height / 2, scale: scale };
+        }
+        function drawCube(cube) {
+          var cosX = Math.cos(cube.rotX);
+          var sinX = Math.sin(cube.rotX);
+          var cosY = Math.cos(cube.rotY);
+          var sinY = Math.sin(cube.rotY);
+          var s = cube.size / 2;
+          var vertices = [
+            [-s, -s, -s], [s, -s, -s], [s, s, -s], [-s, s, -s],
+            [-s, -s, s], [s, -s, s], [s, s, s], [-s, s, s]
+          ];
+          var rotated = vertices.map(function (v) {
+            var x = v[0];
+            var y = v[1] * cosX - v[2] * sinX;
+            var z = v[1] * sinX + v[2] * cosX;
+            var x2 = x * cosY + z * sinY;
+            var z2 = -x * sinY + z * cosY;
+            return project3D(cube.x + x2, cube.y + y, cube.z + z2);
+          });
+          var edges = [
+            [0, 1], [1, 2], [2, 3], [3, 0],
+            [4, 5], [5, 6], [6, 7], [7, 4],
+            [0, 4], [1, 5], [2, 6], [3, 7]
+          ];
+          ctx.strokeStyle = 'rgba(0, 255, 65, ' + cube.opacity + ')';
+          ctx.lineWidth = 1;
+          edges.forEach(function (edge) {
+            var p1 = rotated[edge[0]];
+            var p2 = rotated[edge[1]];
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+          });
+        }
+        function animate() {
+          ctx.clearRect(0, 0, width, height);
+          cubes.forEach(function (cube) {
+            cube.x += cube.speedX + mouseX * 0.3;
+            cube.y += cube.speedY + mouseY * 0.3;
+            cube.rotX += cube.rotSpeedX;
+            cube.rotY += cube.rotSpeedY;
+            if (cube.x < -100) cube.x = width + 100;
+            if (cube.x > width + 100) cube.x = -100;
+            if (cube.y < -100) cube.y = height + 100;
+            if (cube.y > height + 100) cube.y = -100;
+            drawCube(cube);
+          });
+          requestAnimationFrame(animate);
+        }
+        animate();
+        window.addEventListener('resize', function () {
+          width = canvas.width = window.innerWidth;
+          height = canvas.height = window.innerHeight;
+        });
+      }
+      init3DBackground();
+
+      function observeReveals() {
+        var reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+        if (!('IntersectionObserver' in window)) {
+          reveals.forEach(function (el) { el.classList.add('visible'); });
+          return;
+        }
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        reveals.forEach(function (el) { observer.observe(el); });
+      }
+      observeReveals();
+
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
